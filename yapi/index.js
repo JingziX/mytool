@@ -30,6 +30,9 @@ const changeType = (value) => {
 const isObject = (t) => {
   return Object.prototype.toString.call(t) === '[object Function]';
 }
+const firstUppcase = (val)=>{
+  return val.charAt(0).toUpperCase() + val.slice(1)
+}
 //当前是多个参数情况下
 const keyMsg = (properties1) => {
   let msg = '';
@@ -42,7 +45,7 @@ const keyMsg = (properties1) => {
         `
       })
       msg = `${msg}
-      interface ${_v} {
+      interface ${firstUppcase(_v)} {
         ${chidMsg}
       }`
     } else if (properties1[_v].type == 'array') {
@@ -53,7 +56,7 @@ const keyMsg = (properties1) => {
         `
       })
       msg = `${msg}
-      interface ${_v} {
+      interface ${firstUppcase(_v)} {
         ${chidMsg}
       }`
     } else {
