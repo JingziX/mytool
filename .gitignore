@@ -3,5 +3,6 @@
 /node_modules
 /yapi/api
 /yapi/menu/menulist.js
+/yapi/cookie.js
 yarn.lock
 package-lock.json
