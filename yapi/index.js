@@ -1,9 +1,9 @@
 
 var fs = require('fs');
-const menulist = require('../menu/menulist.js');
+const menulist = require('./menu/menulist.js');
 const axios = require('axios');
 const api = 'http://192.168.5.222/api/interface/get?id=';
-const cookie = ``
+const cookie = require('./cookie')
 
 /** 修改类型 */
 const changeType = (value) => {
