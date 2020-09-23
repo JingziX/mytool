@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "axios": "^0.20.0",
+    "evernote-node-simple": "https://github.com/pashangshangpo/evernote-node-simple.git",
+    "fs-extra": "^9.0.1",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "mock": "^0.1.1",
+    "mockjs": "^1.1.0",
+    "peak-mock": "https://github.com/pashangshangpo/peak-mock.git",
+    "swagger-client": "3.11.0"
+  }
+}
