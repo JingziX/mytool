@@ -3,7 +3,7 @@
 var fs = require('fs');
 const axios = require('axios');
 const api = 'http://192.168.5.222/api/interface/list_menu?project_id=190';
-const cookie = ``;
+const cookie = require('../cookie.js');
 const formatData = (list) => {
   const newList = list.map(_v => {
     const { name, _id: id, list } = _v;
@@ -24,7 +24,7 @@ const formatData = (list) => {
   )
 }
 const write = (msg) => {
-  fs.writeFile('./menu/menulist.js', msg, 'utf8', function (err) {
+  fs.writeFile('./yapi/menu/menulist.js', msg, 'utf8', function (err) {
     //如果err=null，表示文件使用成功，否则，表示希尔文件失败
     if (err)
       console.log('写文件出错了，错误是：' + err);

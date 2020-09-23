@@ -3,7 +3,7 @@ var fs = require('fs');
 const menulist = require('./menu/menulist.js');
 const axios = require('axios');
 const api = 'http://192.168.5.222/api/interface/get?id=';
-const cookie = require('./cookie')
+const cookie = require('./cookie.js')
 
 /** 修改类型 */
 const changeType = (value) => {
@@ -76,7 +76,7 @@ const formatData = (body, name, childid) => {
   }
 }
 const write = (msg, name, childid) => {
-  const file = `./api/${childid}.ts`;
+  const file = `./yapi/api/${childid}.ts`;
   const omsg = `/**${name} */
   ${msg}`
   fs.writeFile(file, omsg, 'utf8', function (err) {
@@ -104,7 +104,8 @@ function getData(name, childid) {
       }
     });
 }
-
+if(!menulist || Object.keys(menulist).length == 0)return console.log("请先获取菜单,执行命令 node yapi/menu/menu.js");
+console.log(menulist,Object.keys(menulist).length == 0)
 menulist.forEach((element, index) => {
   const { childList } = element;
   if (childList && index >= 1) {
