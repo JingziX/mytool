@@ -1,1 +1,1 @@
-module.exports = ``
+module.exports = `_yapi_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEzMywiaWF0IjoxNjAwNTA5MDI3LCJleHAiOjE2MDExMTM4Mjd9.79G3eKPxCla00CXvj92-9nGXsAC704bPmYV16JSw7-M; _yapi_uid=133`
