@@ -41,7 +41,8 @@ const keyMsg = (properties1) => {
       let chidMsg = '';
       const { properties: pro } = properties1[_v];
       Object.keys(pro).forEach(_v => {
-        chidMsg = chidMsg + `${_v}?:${changeType(pro[_v])} // ${pro[_v].description}
+        chidMsg =  `${chidMsg} /**${pro[_v].description}*/
+        ${_v}?:${changeType(pro[_v])}  
         `
       })
       msg = `${msg}
@@ -52,7 +53,8 @@ const keyMsg = (properties1) => {
       const { items: { properties: pro } } = properties1[_v];
       let chidMsg = '';
       Object.keys(pro).forEach(_v => {
-        chidMsg = chidMsg + `${_v}?:${changeType(pro[_v])} // ${pro[_v].description}
+        chidMsg = `${chidMsg} /**${pro[_v].description}*/
+        ${_v}?:${changeType(pro[_v])}
         `
       })
       msg = `${msg}
@@ -60,8 +62,8 @@ const keyMsg = (properties1) => {
         ${chidMsg}
       }`
     } else {
-      msg = `${msg} ${_v}?:${changeType(properties1[_v])} // ${properties1[_v].description}
-      `
+      msg = `${msg} /**${properties1[_v].description}*/
+      ${_v}?:${changeType(properties1[_v])}`
     }
   })
   return msg;
