@@ -1,0 +1,350 @@
+{
+  "ordersList": [
+    {
+      "product": [
+        {
+          "lineItemsId": "6272673448094",
+          "ID": "6d8ec99a03e148e29f9753afbc934224",
+          "properties": {
+            "cj_content": [
+              {
+                "Hochgeladene Datei": "https://cdn.shopify.com/s/files/1/0033/4807/0511/files/download.html?id=5c52d8bc-0c12-4c20-9175-40277499618e&uu=78c8abb1-a4de-44a8-b194-35d2674bc137&mo=-/crop/1691x1665/463,24/-/preview/&fi=cGlrYWNodV9jb2xvci5qcGc=&wi=3264&he=1836&mi=aW1hZ2UvanBlZw==&image=true"
+              }
+            ],
+            "thirdPardMessage": [
+              {
+                "name": "Hochgeladene Datei",
+                "value": "https://cdn.shopify.com/s/files/1/0033/4807/0511/files/download.html?id=5c52d8bc-0c12-4c20-9175-40277499618e&uu=78c8abb1-a4de-44a8-b194-35d2674bc137&mo=-/crop/1691x1665/463,24/-/preview/&fi=cGlrYWNodV9jb2xvci5qcGc=&wi=3264&he=1836&mi=aW1hZ2UvanBlZw==&image=true"
+              }
+            ],
+            "cj_custom": "default",
+            "type": 2,
+            "customMessgae": [
+              {
+                "img": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/589092816642.jpg",
+                "top": 296.375,
+                "left": 336.625,
+                "type": "Picture",
+                "angle": "",
+                "scaleX": 1.4701493,
+                "scaleY": 2.062189,
+                "imgicon": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/471311024296.jpg",
+                "podType": "4",
+                "areaName": "Customized Area",
+                "areaType": 1,
+                "fontSize": 12,
+                "typeName": "图片",
+                "areaWidth": "",
+                "fontSpace": 0,
+                "areaLength": "",
+                "areaNameEn": "",
+                "backImgList": [
+                  {
+                    "color": "Silver",
+                    "imgsrc": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/112314863736663.jpg"
+                  },
+                  {
+                    "color": "Gold",
+                    "imgsrc": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/1395097107478.jpg"
+                  },
+                  {
+                    "color": "Rose Gold",
+                    "imgsrc": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/490922394900.jpg"
+                  }
+                ]
+              }
+            ]
+          },
+          "STANPRODUCTID": "EA55DD99-DDE6-4977-83A6-E9F8D59F7EA0",
+          "SPLITCJORDERID": null,
+          "cjproductnamecn": "绘画项链",
+          "cjproductnameen": "Painting necklace",
+          "entryCode": "7113119090",
+          "entryValue": 2,
+          "CJOrderId": "GX201128293780719543",
+          "SKU": "CJZBLXLX10413-Silver-Keychain",
+          "GRAMS": 30,
+          "PRICE": 4.89,
+          "PROPERTY": "COMMON,THIN",
+          "QUANTITY": 1,
+          "SHIPPING_NAME": "Kindermalerei Anhänger",
+          "SHOPIFYPRICE": 34.99,
+          "PURCHASING_REMARK": "n",
+          "cj_product_name": "Custom Children's Painting Necklace",
+          "image": "https://cdn.shopify.com/s/files/1/0406/7141/2382/products/8f6a403f-5a3b-4b58-a19a-1c587cbbf95d.jpg?v=1591382833",
+          "cjProductId": "3BE61374-DF13-433F-AACC-41B5F51195AD",
+          "cjImage": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/112314863736663.jpg",
+          "originalPrice": 4.89,
+          "weight": 5,
+          "date": "2020-11-28 15:55:00",
+          "location": null,
+          "horizontalFlag": null,
+          "VARIANT_ID": "34548900266142",
+          "privateDeductionId": null,
+          "productType": "0",
+          "message": [],
+          "isSupplieProduct": 0
+        },
+        {
+          "lineItemsId": "6272673415326",
+          "ID": "c652fb750db7439bbd8ebc497402f71b",
+          "properties": {
+            "cj_content": [
+              {
+                "Hochgeladene Datei": "https://cdn.shopify.com/s/files/1/0033/4807/0511/files/download.html?id=5c52d8bc-0c12-4c20-9175-40277499618e&uu=e181936d-930b-476d-a24a-b859ede9c082&mo=-/crop/1497x1828/226,470/-/preview/&fi=Ym95LmpwZw==&wi=1836&he=3264&mi=aW1hZ2UvanBlZw==&image=true"
+              }
+            ],
+            "thirdPardMessage": [
+              {
+                "name": "Hochgeladene Datei",
+                "value": "https://cdn.shopify.com/s/files/1/0033/4807/0511/files/download.html?id=5c52d8bc-0c12-4c20-9175-40277499618e&uu=e181936d-930b-476d-a24a-b859ede9c082&mo=-/crop/1497x1828/226,470/-/preview/&fi=Ym95LmpwZw==&wi=1836&he=3264&mi=aW1hZ2UvanBlZw==&image=true"
+              }
+            ],
+            "cj_custom": "default",
+            "type": 2,
+            "customMessgae": [
+              {
+                "img": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/589092816642.jpg",
+                "top": 296.375,
+                "left": 336.625,
+                "type": "Picture",
+                "angle": "",
+                "scaleX": 1.4701493,
+                "scaleY": 2.062189,
+                "imgicon": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/471311024296.jpg",
+                "podType": "4",
+                "areaName": "Customized Area",
+                "areaType": 1,
+                "fontSize": 12,
+                "typeName": "图片",
+                "areaWidth": "",
+                "fontSpace": 0,
+                "areaLength": "",
+                "areaNameEn": "",
+                "backImgList": [
+                  {
+                    "color": "Silver",
+                    "imgsrc": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/112314863736663.jpg"
+                  },
+                  {
+                    "color": "Gold",
+                    "imgsrc": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/1395097107478.jpg"
+                  },
+                  {
+                    "color": "Rose Gold",
+                    "imgsrc": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/490922394900.jpg"
+                  }
+                ]
+              }
+            ]
+          },
+          "STANPRODUCTID": "C4AC586B-A6B7-472E-AD03-3D3FE854685A",
+          "SPLITCJORDERID": null,
+          "cjproductnamecn": "绘画项链",
+          "cjproductnameen": "Painting necklace",
+          "entryCode": "7113119090",
+          "entryValue": 2,
+          "CJOrderId": "GX201128293780719543",
+          "SKU": "CJZBLXLX10413-Rose Gold-Keychain",
+          "GRAMS": 30,
+          "PRICE": 5.73,
+          "PROPERTY": "COMMON,THIN",
+          "QUANTITY": 1,
+          "SHIPPING_NAME": "Kindermalerei Anhänger",
+          "SHOPIFYPRICE": 34.99,
+          "PURCHASING_REMARK": "n",
+          "cj_product_name": "Custom Children's Painting Necklace",
+          "image": "https://cdn.shopify.com/s/files/1/0406/7141/2382/products/8f6a403f-5a3b-4b58-a19a-1c587cbbf95d.jpg?v=1591382833",
+          "cjProductId": "3BE61374-DF13-433F-AACC-41B5F51195AD",
+          "cjImage": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/490922394900.jpg",
+          "originalPrice": 5.73,
+          "weight": 5,
+          "date": "2020-11-28 15:55:00",
+          "location": null,
+          "horizontalFlag": null,
+          "VARIANT_ID": "34548900167838",
+          "privateDeductionId": null,
+          "productType": "0",
+          "message": [],
+          "isSupplieProduct": 0
+        }
+      ],
+      "weightChange": null,
+      "order": {
+        "TRACKINGNUMBERTYPE": null,
+        "disputeId": null,
+        "procurementflag": "1",
+        "email": null,
+        "split": "160662045297726",
+        "TRACKINGNUMBERHISTORY": "null,00340434322636865076,",
+        "fulfillmentsId": "2751990759582",
+        "shopshipstationId": null,
+        "salesman": "2",
+        "salesmanName": "Andy Chou",
+        "ORDER_NUMBER": "KK#3628",
+        "ID": "GX201128293780719543",
+        "SHIPMENTS_ORDER_ID": "CJ2011292937882974",
+        "paymentDate": {
+          "date": 28,
+          "day": 6,
+          "hours": 22,
+          "minutes": 50,
+          "month": 10,
+          "nanos": 0,
+          "seconds": 8,
+          "time": 1606575008000,
+          "timezoneOffset": -480,
+          "year": 120
+        },
+        "consumerName": "Lukas Westensee",
+        "NOTE_ATTRIBUTES": null,
+        "STORE_NAME": "kettenkonzept",
+        "erpnote": null,
+        "ORDER_QUANTITY": 2,
+        "AMOUNT": 14.25,
+        "ORDERWEIGHT": 60,
+        "POSTAGE": 3.63,
+        "CUSTOMER_NAME": "Marieluise Kirchner",
+        "SHIPPING_ADDRESS": "Pappelallee 83",
+        "shippingAddress2": "",
+        "CITY": "Berlin",
+        "PROVINCE": null,
+        "ZIP": "10437",
+        "COUNTRY_CODE": "DE",
+        "PHONE": null,
+        "LOGISTIC_NAME": "CJPacket Euro Ordinary",
+        "LOGISTICSMODE": "O5",
+        "LOGISTICSMODENAME": "联邮通经济挂号-普货",
+        "TRACKINGNUMBER": "00340434322636865076",
+        "logisticErrorInfo": null,
+        "trackingNumberGenerationTime": {
+          "date": 29,
+          "day": 0,
+          "hours": 11,
+          "minutes": 27,
+          "month": 10,
+          "nanos": 0,
+          "seconds": 45,
+          "time": 1606620465000,
+          "timezoneOffset": -480,
+          "year": 120
+        },
+        "STATUS": "31",
+        "store": "5",
+        "stockoutRefundStatus": null,
+        "INTERNALODDNUMBER": "303175647004",
+        "MERCHANTN_NUMBER": "5c91e9f7ece94f3596264a463501adcf",
+        "ownerName": "杨移",
+        "orderArea": "China Warehouse",
+        "areaId": "1",
+        "shortageIdentity": "0",
+        "cunLevel": 2,
+        "moneyLevel": 4,
+        "userLevel": 2,
+        "properties": [
+          {
+            "cj_content": [
+              {
+                "Hochgeladene Datei": "https://cdn.shopify.com/s/files/1/0033/4807/0511/files/download.html?id=5c52d8bc-0c12-4c20-9175-40277499618e&uu=78c8abb1-a4de-44a8-b194-35d2674bc137&mo=-/crop/1691x1665/463,24/-/preview/&fi=cGlrYWNodV9jb2xvci5qcGc=&wi=3264&he=1836&mi=aW1hZ2UvanBlZw==&image=true"
+              }
+            ],
+            "thirdPardMessage": [
+              {
+                "name": "Hochgeladene Datei",
+                "value": "https://cdn.shopify.com/s/files/1/0033/4807/0511/files/download.html?id=5c52d8bc-0c12-4c20-9175-40277499618e&uu=78c8abb1-a4de-44a8-b194-35d2674bc137&mo=-/crop/1691x1665/463,24/-/preview/&fi=cGlrYWNodV9jb2xvci5qcGc=&wi=3264&he=1836&mi=aW1hZ2UvanBlZw==&image=true"
+              }
+            ],
+            "cj_custom": "default",
+            "type": 2,
+            "customMessgae": [
+              {
+                "img": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/589092816642.jpg",
+                "top": 296.375,
+                "left": 336.625,
+                "type": "Picture",
+                "angle": "",
+                "scaleX": 1.4701493,
+                "scaleY": 2.062189,
+                "imgicon": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/471311024296.jpg",
+                "podType": "4",
+                "areaName": "Customized Area",
+                "areaType": 1,
+                "fontSize": 12,
+                "typeName": "图片",
+                "areaWidth": "",
+                "fontSpace": 0,
+                "areaLength": "",
+                "areaNameEn": "",
+                "backImgList": [
+                  {
+                    "color": "Silver",
+                    "imgsrc": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/112314863736663.jpg"
+                  },
+                  {
+                    "color": "Gold",
+                    "imgsrc": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/1395097107478.jpg"
+                  },
+                  {
+                    "color": "Rose Gold",
+                    "imgsrc": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/490922394900.jpg"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cj_content": [
+              {
+                "Hochgeladene Datei": "https://cdn.shopify.com/s/files/1/0033/4807/0511/files/download.html?id=5c52d8bc-0c12-4c20-9175-40277499618e&uu=e181936d-930b-476d-a24a-b859ede9c082&mo=-/crop/1497x1828/226,470/-/preview/&fi=Ym95LmpwZw==&wi=1836&he=3264&mi=aW1hZ2UvanBlZw==&image=true"
+              }
+            ],
+            "thirdPardMessage": [
+              {
+                "name": "Hochgeladene Datei",
+                "value": "https://cdn.shopify.com/s/files/1/0033/4807/0511/files/download.html?id=5c52d8bc-0c12-4c20-9175-40277499618e&uu=e181936d-930b-476d-a24a-b859ede9c082&mo=-/crop/1497x1828/226,470/-/preview/&fi=Ym95LmpwZw==&wi=1836&he=3264&mi=aW1hZ2UvanBlZw==&image=true"
+              }
+            ],
+            "cj_custom": "default",
+            "type": 2,
+            "customMessgae": [
+              {
+                "img": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/589092816642.jpg",
+                "top": 296.375,
+                "left": 336.625,
+                "type": "Picture",
+                "angle": "",
+                "scaleX": 1.4701493,
+                "scaleY": 2.062189,
+                "imgicon": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/471311024296.jpg",
+                "podType": "4",
+                "areaName": "Customized Area",
+                "areaType": 1,
+                "fontSize": 12,
+                "typeName": "图片",
+                "areaWidth": "",
+                "fontSpace": 0,
+                "areaLength": "",
+                "areaNameEn": "",
+                "backImgList": [
+                  {
+                    "color": "Silver",
+                    "imgsrc": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/112314863736663.jpg"
+                  },
+                  {
+                    "color": "Gold",
+                    "imgsrc": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/1395097107478.jpg"
+                  },
+                  {
+                    "color": "Rose Gold",
+                    "imgsrc": "https://cc-west-usa.oss-accelerate.aliyuncs.com/20200505/490922394900.jpg"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "amountNote": false
+      }
+    }
+  ]
+}

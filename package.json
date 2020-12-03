@@ -1,8 +1,14 @@
 {
+  "name": "jingzi-tool",
+  "author": "jingzi",
+  "license": "MIC",
   "dependencies": {
     "axios": "^0.20.0",
+    "bagpipe": "^0.3.5",
     "evernote-node-simple": "https://github.com/pashangshangpo/evernote-node-simple.git",
     "fs-extra": "^9.0.1",
+    "js-base64": "^3.6.0",
+    "request": "^2.88.2",
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
