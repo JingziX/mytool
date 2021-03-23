@@ -9,7 +9,7 @@ fs.readFile("wiki/text.txt",'utf-8',function(err,data){
       const d1 = _i.split('[');
       console.log('222====',d1[1])
       if(d1[1]){
-        const d2 = (d1[1].split(']'))[0];
+        const d2 = (d1[1].split(']'))[0].replace("'","");
         const data = {
           name:d2
         }
