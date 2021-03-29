@@ -47,8 +47,8 @@ const HEADERS = {
 };
 
 const ACCOUNT = {
-    user: 'xiangjunmin@cjdropshipping.co',
-    pass: 'xjm,1358716'
+    user: '.....',
+    pass: '.....'
 };
 
 request = request.defaults({ jar: true });
