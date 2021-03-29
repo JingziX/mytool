@@ -1,2 +1,0 @@
-android及ios推送
-undefined

@@ -1,2 +1,0 @@
-etsy
-undefined

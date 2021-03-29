@@ -1,2 +1,0 @@
-canal数据同步规则
-undefined

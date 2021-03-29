@@ -3890,11 +3890,13 @@
     const output = document.getElementById("output");
     const list = document.getElementById("wiki-structure").childNodes;
     const newL = [];
+    let outname='';
     console.log(list)
     function getData(L,out) {
       L.forEach(_i => {
-        const { nodeName, childNodes } = _i;
+        const { nodeName, childNodes,className } = _i;
         if (nodeName == 'LI') {
+          if(className=='level0 wiki_item_wrap') outname = _i.firstChild.outerText
           omenu.forEach(_m => {
             const { nodeName, childNodes, firstChild: { outerText, attributes } } = _i;
             const { name } = _m;
@@ -3902,7 +3904,7 @@
               const newObj = {
                 code: attributes.target.nodeValue,
                 name: name,
-                outname:`${out?'-':''}${name}`
+                outname:`${outname?outname+'-':''}${name}`
               }
               newL.push(newObj)
             }
@@ -3921,7 +3923,7 @@
     }
     getData(list);
     console.log(newL)
-    // output.value = JSON.stringify(newL);
+    output.value = JSON.stringify(newL);
   </script>
 </body>
 

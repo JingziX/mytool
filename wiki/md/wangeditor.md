@@ -1,2 +1,0 @@
-wangeditor
-undefined

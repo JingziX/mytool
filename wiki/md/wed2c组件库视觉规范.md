@@ -1,2 +1,0 @@
-wed2c组件库视觉规范
-undefined

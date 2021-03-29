@@ -126,18 +126,18 @@ function getHTMl() {
     const loginTxt = '登录-TAPD';
     let error = '';
     Menu.forEach(_i => {
-        const { code, name } = _i;
+        const { code, name,outname } = _i;
         const url = `https://www.tapd.cn/66473603/markdown_wikis/edit/${code}/0/security`;
         setTimeout(() => {
             axios.get(url, {
                 headers: {
-                    cookie: 'sso-login-token=0a180b928222b01f1e47adee0f2ef048; tapdsession=1616850501ab257df7c176a6de39c9d1b31406a590e1820338e0c9910e40dc902173f527e8; locale=zh_cn'
+                    cookie: 'sso-login-token=5b1d3f0e873ffebe1c2f672b041fefcc; tapdsession=16169828899f2633b67d5e0b0e59fa43ee66bbc2e583d60ff3ef7530ab4221a35bfa0f7d4c; locale=zh_cn'
                 }
             }).then(res => {
                 // console.log(res)
                 const newd = getValue(res.data,name);
-                const law = `${name}\n${newd}`
-                fs.writeFile(`wiki/md/${name}.md`, law, err => {
+                const law = `${newd}`
+                fs.writeFile(`wiki/md/${outname}.md`, law, err => {
                     if (err) {
                         console.log(err);
                     }
@@ -148,7 +148,7 @@ function getHTMl() {
     });
     getError(error);
 }
-getHTMl();
+// getHTMl();
 
 
 // 处理html数据
@@ -169,3 +169,47 @@ function getError(error){
         }
     });
 }
+
+//读取文件
+function readMD(){
+    const pathName = "wiki/md";
+    let arr = [];
+    fs.readdir(pathName, function(err, files){
+        var dirs = [];
+        (function iterator(i){
+            if(i == files.length) {
+                // console.log(dirs);
+
+                return ;
+            }
+            fs.stat(path.join(pathName, files[i]), function(err, data){     
+                if(data.isFile()){               
+                    dirs.push(files[i]);
+                    const darr = files[i].indexOf('-')>-1?files[i].split("-"):'';
+                    if(darr){
+                        const d2 = darr[1].split('.');
+                        const name1 = darr[0].toLowerCase();
+                        const name2 = d2[0].toLowerCase();
+                        if(name1==name2 && !arr.includes(name2)){
+                            arr.push(name1);
+                            // fs.mkdirSync(`wiki/${darr[0]}`);
+                        }
+                        
+                    }
+                    for (let index = 0; index < arr.length; index++) {
+                        if(darr && darr[0].toLowerCase()==arr[index].toLowerCase()){
+                            fs.rename(`wiki/md/${files[i]}`,`wiki/${darr[0]}/${files[i]}`,function(err){
+                                if(err){
+                                throw err;
+                                }
+                            })
+                        }
+                        
+                    }
+                }
+                iterator(i+1);
+            });
+        })(0);
+    });
+}
+readMD();
