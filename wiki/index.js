@@ -38,6 +38,7 @@ function dealOriginData() {
 }
 // dealOriginData();
 
+// 登录处理
 const LOGIN = 'https://www.tapd.cn/cloud_logins/login';
 
 const HEADERS = {
@@ -47,8 +48,8 @@ const HEADERS = {
 };
 
 const ACCOUNT = {
-    user: '.....',
-    pass: '.....'
+    user: 'xxxx',
+    pass: 'xxxx'
 };
 
 request = request.defaults({ jar: true });
@@ -85,7 +86,7 @@ function loadLoginPage(next) {
 function doLogin(next) {
     var encodedObj = getEncodedValue();
     var formData = {
-        'data[Login][ref]': 'https://www.tapd.cn/66473603/markdown_wikis/edit/1166473603001000189/0/security',
+        'data[Login][ref]': 'https://www.tapd.cn/43511556/markdown_wikis/edit/1143511556001000316/0/security',
         'data[Login][encrypt_key]': encodedObj.key,
         'data[Login][encrypt_iv]': encodedObj.iv,
         'data[Login][site]': 'TAPD',
@@ -93,7 +94,7 @@ function doLogin(next) {
         'data[Login][email]': ACCOUNT.user,
         'data[Login][password]': encodedObj.pass,
         'data[Login][login]': 'login',
-        'sc_token': '7X4j7tP11fR6OFOL'
+        'sc_token': 'HgJbXrpiMRflkrSy'
     };
     request.post({
         url: LOGIN,
@@ -101,7 +102,7 @@ function doLogin(next) {
         formData: formData,
         headers: HEADERS
     }, function(err, response, body) {
-        console.log('241241241', response)
+        console.log('241241241', response.request.req)
         if (err) {
             console.log(err);
         } else {
@@ -117,38 +118,42 @@ function login(next) {
         });
     });
 }
-// login(function() {
-//     console.log('登录成功！');
-// });
+login(function() {
+    console.log('登录成功！');
+});
 
+// getHTMl();
 /* 获取列表的html数据 */
 function getHTMl() {
     const loginTxt = '登录-TAPD';
     let error = '';
     Menu.forEach(_i => {
         const { code, name,outname } = _i;
-        const url = `https://www.tapd.cn/66473603/markdown_wikis/edit/${code}/0/security`;
+        const url = `https://www.tapd.cn/43511556/markdown_wikis/edit/${code}/0/security`;
         setTimeout(() => {
             axios.get(url, {
                 headers: {
-                    cookie: 'sso-login-token=5b1d3f0e873ffebe1c2f672b041fefcc; tapdsession=16169828899f2633b67d5e0b0e59fa43ee66bbc2e583d60ff3ef7530ab4221a35bfa0f7d4c; locale=zh_cn'
+                    cookie: 'sso-login-token=124f0c5861d8dbf824c3d398ceea5703; tapdsession=1617265956428126f321ad0becdf99041ced80e1477be4aaab33e693c5150130ee17fc8c61; locale=zh_cn'
                 }
             }).then(res => {
                 // console.log(res)
-                const newd = getValue(res.data,name);
-                const law = `${newd}`
-                fs.writeFile(`wiki/md/${outname}.md`, law, err => {
-                    if (err) {
-                        console.log(err);
-                    }
-                    console.log(name +",写入成功！");
-                });
+                if(res.data.indexOf("企业QQ登录")>0){
+                    console.log('当前未登录')
+                }else{
+                    const newd = getValue(res.data,name);
+                    const law = `${newd}`
+                    fs.writeFile(`wiki/md/${outname}.md`, law, err => {
+                        if (err) {
+                            console.log(err);
+                        }
+                        console.log(name +",写入成功！");
+                    });
+                }
             })
-        }, 2000)
+        }, 500)
     });
     getError(error);
 }
-// getHTMl();
 
 
 // 处理html数据
@@ -212,4 +217,4 @@ function readMD(){
         })(0);
     });
 }
-readMD();
+// readMD();
