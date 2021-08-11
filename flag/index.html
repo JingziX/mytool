@@ -48,7 +48,7 @@
           img.src = `img/${item}.png`; // 设置图片源地址
         })
         const imgClassStr = JSON.stringify(imgClass).replace(/[",]["]/g,'');
-        console.log(imgClassStr)
+        // console.log(imgClassStr)
         this.imgDownload();
       },
       imgDownload(){
@@ -58,7 +58,7 @@
         // const blob = this.base64Img2Blob(canvas.toDataURL("image/png")); //new Blob([content]);
         // that.imgSrc = URL.createObjectURL(blob);
       },
-      base64Img2Blob(code){
+      base64Img2Blob(code){//=有问题
         const parts = code.split(';base64,');
         const contentType = parts[0].split(':')[1];
         const raw = window.atob(parts[1]);
