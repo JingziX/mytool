@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>处理各国图片</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+    <div @click="img" class="btn">绘制图片</div>
+    <a v-bind:href="imgSrc" class="btn">导出图片</a>
+    <div class="canvas-box">
+      <canvas class="canvas" width="490" height="1030" id="canvas"></canvas>
+      <img v-bind:src="imgSrc" /> 
+    </div>
+  </div>
+</body>
+</html>
+<script>
+  const flags = ["AC","AD","AE","AF","AG","AI","AL","AM","AN","AO","AQ","AR","AS","AT","AU","AW","AX","AZ","BA","BB","BD","BE","BF","BG","BH","BI","BJ","BL","BM","BN","BO","BQ","BR","BS","BT","BV","BW","BY","BZ","CA","CC","CD","CF","CG","CH","CI","CK","CL","CM","CN","CO","CR","CU","CV","CW","CX","CY","CZ","DE","DJ","DK","DM","DO","DZ","EC","EE","EG","EH","ER","ES","ET","FI","FJ","FK","FM","FO","FR","FX","GA","GB","GD","GE","GF","GG","GH","GI","GL","GM","GN","GP","GQ","GR","GS","GT","GU","GW","GY","HK","HM","HN","HR","HT","HU","ID","IE","IL","IM","IN","IO","IQ","IR","IS","IT","JE","JM","JO","JP","KE","KG","KH","KI","KM","KN","KP","KR","KW","KY","KZ","LA","LB","LC","LI","LK","LR","LS","LT","LU","LV","LY","MA","MC","MD","ME","MF","MG","MH","MK","ML","MM","MN","MO","MP","MQ","MR","MS","MT","MU","MV","MW","MX","MY","MZ","NA","NC","NE","NF","NG","NI","NL","NO","NP","NR","NU","NZ","OM","PA","PE","PF","PG","PH","PK","PL","PM","PN","PR","PS","PT","PW","PY","QA","RE","RO","RS","RU","RW","SA","SB","SC","SD","SE","SG","SH","SI","SJ","SK","SL","SM","SN","SO","SR","SS","ST","SV","SX","SY","SZ","TC","TD","TF","TG","TH","TJ","TK","TL","TM","TN","TO","TR","TT","TV","TW","TZ","UA","UG","UM","US","UY","UZ","VA","VC","VE","VG","VI","VN","VU","WELSH","WF","WS","XK","YE","YIDDISH","YT","YU","ZA","ZM","ZW"]
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: 'Hello Vue!',
+      canvasDOM:null,
+      imgSrc:null
+    },
+    created:()=>{
+    },
+    methods:{
+      img(){
+        const that = this;
+        this.canvasDOM = document.getElementById("canvas").getContext('2d');
+        let imgClass = [];
+        flags.forEach((item,index)=>{
+          const cx = index%10*50;
+          const cy = Math.floor(index/10)*40;
+          const bg = `.${item}{background-position:${cx}px,${cy}px;}`
+          imgClass.push(bg);
+          let img = new Image();   // 创建img元素
+          img.onload = function(){
+            that.canvasDOM.drawImage(img,cx,cy);
+          }
+          img.src = `img/${item}.png`; // 设置图片源地址
+        })
+        const imgClassStr = JSON.stringify(imgClass).replace(/[",]["]/g,'');
+        console.log(imgClassStr)
+        this.imgDownload();
+      },
+      imgDownload(){
+        const that = this;
+        const canvas = document.getElementById("canvas");
+        this.imgSrc = canvas.toDataURL("image/png");
+        // const blob = this.base64Img2Blob(canvas.toDataURL("image/png")); //new Blob([content]);
+        // that.imgSrc = URL.createObjectURL(blob);
+      },
+      base64Img2Blob(code){
+        const parts = code.split(';base64,');
+        const contentType = parts[0].split(':')[1];
+        const raw = window.atob(parts[1]);
+        const rawLength = raw.length;
+
+        const uInt8Array = new Uint8Array(rawLength);
+
+        for (const i = 0; i < rawLength; ++i) {
+          uInt8Array[i] = raw.charCodeAt(i);
+        }
+
+        return new Blob([uInt8Array], {type: contentType});
+      }
+    }
+  })
+</script>
