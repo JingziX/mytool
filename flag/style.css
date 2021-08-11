@@ -17,3 +17,10 @@
   width: auto;
   margin: 5px;
 }
+.flag{
+  background: url(./flag.png) #f00 no-repeat;
+  width: 40px;
+  height: 30px;
+  display: inline-block;
+  
+}
