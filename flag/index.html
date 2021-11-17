@@ -14,12 +14,13 @@
     <div @click="img" class="btn">绘制图片</div>
     <a v-bind:href="imgSrc" class="btn">导出图片</a>
     <div @click="verify" class="btn">验证数据是否正确</div>
+    <input type="text" v-model="styledata">
     <div class="canvas-box">
-      <canvas class="canvas" width="490" height="1030" id="canvas"></canvas>
-      <img v-bind:src="imgSrc" /> 
+      <canvas class="canvas" width="340" height="718" id="canvas"></canvas>
+      <img v-bind:src="imgSrc" title="flag" /> 
       <div v-show="compareShow">
         <div class="" v-for="item in list" :key="item.name">
-          <img :src="'img/'+item+'.png'" />
+          <img :src="'img/'+item+'.png'" width="24" height="18" />
           <span :class="['flag',item]"></span>
         </div>
       </div>
@@ -36,7 +37,8 @@
       canvasDOM:null,
       imgSrc:null,
       list:flags,
-      compareShow:false
+      compareShow:false,
+      styledata:'',//背景样式
     },
     updated:()=>{
     },
@@ -46,18 +48,19 @@
         this.canvasDOM = document.getElementById("canvas").getContext('2d');
         let imgClass = [];
         flags.forEach((item,index)=>{
-          const cx = index%10*50;
-          const cy = Math.floor(index/10)*40;
+          const cx = index%10*34;
+          const cy = Math.floor(index/10)*28;
           const bg = `.${item}{background-position:${cx==0 ? 0 :'-'+cx }px ${cy==0?0:"-"+cy}px;}`
           imgClass.push(bg);
-          let img = new Image();   // 创建img元素
+          let img = new Image(24,18);   // 创建img元素
           img.onload = function(){
-            that.canvasDOM.drawImage(img,cx,cy);
+            that.canvasDOM.drawImage(img,cx,cy,24,18);
           }
           img.src = `img/${item}.png`; // 设置图片源地址
         })
-        const imgClassStr = JSON.stringify(imgClass).replace(/[",]["]/g,'');
+        const imgClassStr = JSON.stringify(imgClass).replace(/[\"\,\]\[]/g,'');
         console.log(imgClassStr)
+        this.styledata = imgClassStr;
         this.imgDownload();
       },
       imgDownload(){

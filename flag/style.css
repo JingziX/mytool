@@ -19,8 +19,8 @@
 }
 .flag{
   background: url(./flag.png) #f00 no-repeat;
-  width: 40px;
-  height: 30px;
+  width: 24px;
+  height: 18px;
   display: inline-block;
   
 }
