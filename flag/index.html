@@ -1,3 +1,11 @@
+<!--
+ * @Author: jingzi 1163478123@qq.com
+ * @Date: 2022-11-17 17:18:42
+ * @LastEditors: jingzi 1163478123@qq.com
+ * @LastEditTime: 2025-12-31 15:14:24
+ * @Description: 文件描述
+ * Copyright (c) 2025 by jingzi, All Rights Reserved.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,15 +20,15 @@
 <body>
   <div id="app">
     <div @click="img" class="btn">绘制图片</div>
-    <a v-bind:href="imgSrc" class="btn">导出图片</a>
+    <div @click="imgDownload" class="btn">导出图片</div>
     <div @click="verify" class="btn">验证数据是否正确</div>
     <input type="text" v-model="styledata">
     <div class="canvas-box">
-      <canvas class="canvas" width="340" height="718" id="canvas"></canvas>
+      <canvas class="canvas" width="436" height="890" id="canvas"></canvas>
       <img v-bind:src="imgSrc" title="flag" /> 
       <div v-show="compareShow">
         <div class="" v-for="item in list" :key="item.name">
-          <img :src="'img/'+item+'.png'" width="24" height="18" />
+          <img :src="'img/'+item+'.png'" width="40" height="30" />
           <span :class="['flag',item]"></span>
         </div>
       </div>
@@ -45,30 +53,35 @@
     methods:{
       img(){
         const that = this;
+        const imgWidth = 40;
+        const imgHeight = 30;
+        const gap = 4; // 间距4px
         this.canvasDOM = document.getElementById("canvas").getContext('2d');
         let imgClass = [];
         flags.forEach((item,index)=>{
-          const cx = index%10*34;
-          const cy = Math.floor(index/10)*28;
-          const bg = `.${item}{background-position:${cx==0 ? 0 :'-'+cx }px ${cy==0?0:"-"+cy}px;}`
+          const cx = (index % 10) * (imgWidth + gap); // 从0开始，每个图片宽度+间距
+          const cy = Math.floor(index / 10) * (imgHeight + gap); // 从0开始，每个图片高度+间距
+          const bg = `.${item}{background-position:${cx == 0 ? 0 : '-' + cx}px ${cy == 0 ? 0 : '-' + cy}px;}`
           imgClass.push(bg);
-          let img = new Image(24,18);   // 创建img元素
+          let img = new Image(imgWidth,imgHeight);   // 创建img元素
           img.onload = function(){
-            that.canvasDOM.drawImage(img,cx,cy,24,18);
+            that.canvasDOM.drawImage(img,cx,cy,imgWidth,imgHeight);
           }
           img.src = `img/${item}.png`; // 设置图片源地址
         })
         const imgClassStr = JSON.stringify(imgClass).replace(/[\"\,\]\[]/g,'');
         console.log(imgClassStr)
         this.styledata = imgClassStr;
-        this.imgDownload();
       },
       imgDownload(){
-        const that = this;
         const canvas = document.getElementById("canvas");
-        this.imgSrc = canvas.toDataURL("image/png");
-        // const blob = this.base64Img2Blob(canvas.toDataURL("image/png")); //new Blob([content]);
-        // that.imgSrc = URL.createObjectURL(blob);
+        const dataURL = canvas.toDataURL("image/png");
+        this.imgSrc = dataURL;
+        // 创建下载链接
+        const link = document.createElement('a');
+        link.download = 'flag.png';
+        link.href = dataURL;
+        link.click();
       },
       base64Img2Blob(code){//=有问题
         const parts = code.split(';base64,');
